@@ -14,9 +14,10 @@ public class MarkdownParse {
         while(currentIndex < markdown.length()) {
             int openBracket = markdown.indexOf("[", currentIndex);
             int closeBracket = markdown.indexOf("]", openBracket);
+            int newLine = markdown.indexOf("\n", closeBracket); // Find a new line if there is one
 
             int beginLink = closeBracket + 2; // Skip to the start of the link
-            int endLink = markdown.length() - 1; // Get index of end of link
+            int endLink = newLine - 2; // Get index of end of link
             String link = markdown.substring(beginLink, endLink);
             toReturn.add(link);
             break;
