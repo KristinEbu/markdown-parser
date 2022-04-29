@@ -15,11 +15,12 @@ public class MarkdownParseTest {
     private String content;
     private ArrayList<String> links;
     private ArrayList<String> result;
+    private static final String FULL_DIRECTORY = "C:\\Users\\ebuen\\OneDrive\\Documents\\GitHub\\markdown-parser-clone\\";
 
     @Before
     public void setup(){
         try{
-            fileName = Path.of("test-file.md");
+            fileName = Path.of(FULL_DIRECTORY + "test-file.md");
             content = Files.readString(fileName);
             links = MarkdownParse.getLinks(content);
             result = new ArrayList<>(List.of("https://something.com", "some-page.html"));
@@ -27,6 +28,8 @@ public class MarkdownParseTest {
         catch(IOException e){
 
         }
+
+        System.out.println(content);
     }
 
     @Test
