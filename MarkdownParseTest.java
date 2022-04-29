@@ -23,7 +23,7 @@ public class MarkdownParseTest {
             fileName = Path.of(FULL_DIRECTORY + "test-file.md");
             content = Files.readString(fileName);
             links = MarkdownParse.getLinks(content);
-            result = new ArrayList<>(List.of("https://something.com", "some-thing.html"));
+            result = new ArrayList<>(List.of("https://something.com", "some-page.html"));
         }
         catch(IOException e){
 
