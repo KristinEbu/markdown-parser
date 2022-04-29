@@ -41,5 +41,4 @@ public class MarkdownParseTest {
     public void getLinksTest(){
         assertEquals(result, links);
     }
-
 }
