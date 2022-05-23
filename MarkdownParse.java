@@ -40,8 +40,6 @@ public class MarkdownParse {
                 break;
             }
         }
-
-        System.out.println("change");
         return toReturn;
     }
 
